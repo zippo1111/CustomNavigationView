@@ -9,7 +9,7 @@ add:
 in your # viewWillAppear;
 add:
 
--(void)viewWillAppear:(BOOL)animated {
+-(void) viewWillAppear:(BOOL)animated {
 
    [self someMethod:@"Flowers"];
    
@@ -34,7 +34,7 @@ add:
     
 }
 
-- (void)searchBarTextDidEndEditing:(UISearchBar *)aSearchBar {
+- (void) searchBarTextDidEndEditing:(UISearchBar *)aSearchBar {
 
     [self cancelMethod];
     [table reloadData];
