@@ -6,7 +6,7 @@ ios NavBar with search button and search bar
 add:
 #import "CustomNavigationView.h"
 
-in your -(void)viewWillAppear:(BOOL)animated {};
+in your # viewWillAppear;
 add:
 -(void)viewWillAppear:(BOOL)animated {
 
