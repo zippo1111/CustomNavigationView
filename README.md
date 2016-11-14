@@ -9,37 +9,39 @@ add:
 in your -(void)viewWillAppear:(BOOL)animated {};
 add:
 -(void)viewWillAppear:(BOOL)animated {
+
    [self someMethod:@"Flowers"];
+   
 }
 
--(void) someMethod:(NSString *)titleText {    
+-(void) someMethod:(NSString *)titleText {  
+
     CustomNavigViewController *navcntrl = [[CustomNavigViewController alloc] init];
     UIViewController *someview = [navcntrl generator:self title:titleText actionName:@"runSearch"];
-    [self.navigationController addChildViewController:someview];    
-}
-
--(void) anyAction {
-  // action that will be runned after clicking the search button
+    [self.navigationController addChildViewController:someview];  
+    
 }
 
 +add (if you wish) the cancelling/searching operations: 
 
 -(void) cancelMethod {
-    NSLog(@"cancelling");
+
     self.navigationItem.titleView = nil;
     UIBarButtonItem *searchOne = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(runSearch)];
     [searchOne setTintColor:[UIColor colorWithWhite:1.0 alpha:1.0]];
     self.navigationItem.rightBarButtonItem = searchOne;
+    
 }
 
 - (void)searchBarTextDidEndEditing:(UISearchBar *)aSearchBar {
+
     [self cancelMethod];
     [table reloadData];
     [search resignFirstResponder];
+    
 }
 
 -(void) runSearch {
-    NSLog(@"runSearch from: %@", [self class]);
     
     CustomNavigViewController *cnvc = [[CustomNavigViewController alloc] init];
     UISearchController *srchCntrl = [cnvc searchcntrl];
