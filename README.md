@@ -8,6 +8,7 @@ add:
 
 in your # viewWillAppear;
 add:
+
 -(void)viewWillAppear:(BOOL)animated {
 
    [self someMethod:@"Flowers"];
@@ -48,8 +49,7 @@ add:
     srchCntrl.delegate = self;
     srchCntrl.searchBar.delegate = self;
     self.navigationItem.titleView = srchCntrl.searchBar;
-    [srchCntrl.searchBar becomeFirstResponder];
-    
+    [srchCntrl.searchBar becomeFirstResponder];    
     self.navigationItem.rightBarButtonItem = [CustomNavigViewController setCancelButton:self];
     
 }
